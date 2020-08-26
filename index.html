@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid/Quarantine City Limits</title>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Covid/Quarantine City Limits</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
-    </head>
+  <body>
+    <header>City Limits Dream Concert</header>
+    <article class="grid grid-cols-12 gap-2 m-5">
+        <!--Poster-->
+        <section class="grid grid-cols-12 col-span-8 row-span-5 gap-2">
+            <!-- Headliners -->
+    
+            <ul id="headliner" class="col-span-2">
+              <li>band</li>
+              <li>band</li>
+              <li>band</li>
+              <li>band</li>
+              <li>band</li>
+            </ul>
+    
+            <!-- Artists -->
+            <ul id="artist" class="col-span-10 text-center">
+              <li>band</li>
+              <li>band</li>
+              <li>band</li>
+              <li>band</li>
+              <li>band</li>
+            </ul>
+          </section>
+      <!-- User Input -->
+      <section class="grid grid-cols-12 col-span-4 gap-2">
+        <input
+          type="text"
+          placeholder="Artist Name"
+          class="col-start-8 col-end-12"
+        />
+        <button
+          class="col-start-8 col-end-12 bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded"
+        >
+          Add as Headliner
+        </button>
+        <button
+          class="col-start-8 col-end-12 bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded"
+        >
+          Add as Artist
+        </button>
+      </section>
 
-    <body>
-        <header>City Limits Dream Concert</header>
-        <article class="m-5">
-            <!-- User Input -->
-            <section class="grid grid-cols-12 gap-2">
-                <input type="text" placeholder="Artist Name" class="col-start-8 col-end-12" />
-                <button class="col-start-8 col-end-12 bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded">Add as
-                    Headliner</button>
-                <button class="col-start-8 col-end-12 bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded">Add as
-                    Artist</button>
-            </section>
-
-            <!-- Poster -->
-           
-
-            <section class="grid grid-cols-12 gap-2">
-
-                <!-- Headliners -->
-                
-                <ul id = "headliner" class ="col-span-2">
-                    <li>band</li>
-                    <li>band</li>
-                    <li>band</li>
-                    <li>band</li>
-                    <li>band</li>
-
-                </ul>
-
-                <!-- Artists -->
-                <ul id = "artist" class = "col-span-10 text-center" >
-                   <li>band</li>
-                   <li>band</li>
-                   <li>band</li>
-                   <li>band</li>
-                   <li>band</li>
-               
-                </ul>
-            </section>
-        <section class="bg-blue-500" >
-        playlist
-            </section>
-        </article>
-    </body>
-
+      <section class="bg-blue-500 col-span-4">playlist</section>
+    </article>
+  </body>
 </html>
