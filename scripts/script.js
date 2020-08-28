@@ -68,11 +68,17 @@ function bandModalInfo() {
     method: "GET"
   }).then(function (data) {
     console.log(data);
-    $("").text(data.name);//where the band name will appear
-    $("").append(data.image_url);//where the band image will appear
-
+    // $("").text(data.name);//where the band name will appear
+    // $("").append(data.image_url);//where the band image will appear
+  });
+  $.ajax({
+    url: "https://rest.bandsintown.com/artists/" +artistInput+ "/events/?app_id=9ebc2dc78f69f44da1e78195877b2314",
+    method: "GET"
+  }).then(function (data) {
+    console.log(data);
 
   });
+
 }
 
 
