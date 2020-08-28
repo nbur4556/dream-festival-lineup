@@ -1,8 +1,11 @@
-.modal-overlay{
+#modal-overlay{
     width: 100vw;
     height: 100vh;
     opacity: 0.5;
-    z-index: 1000;
+}
+
+#modal-box{
+    margin-top: 30vh;
 }
 
 #poster{
