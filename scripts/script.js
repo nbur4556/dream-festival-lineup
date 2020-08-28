@@ -76,6 +76,9 @@ function bandModalInfo() {
     method: "GET"
   }).then(function (data) {
     console.log(data);
+    $("").text(data.datetime)//date of upcoming show
+    $("").text(data.venue.city)//city next show is held
+    $("").text(data.venue.region)//state next show is held
 
   });
 
