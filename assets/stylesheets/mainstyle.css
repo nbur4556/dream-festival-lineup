@@ -28,3 +28,7 @@
 #artistBtn {font-family: 'Francois One', sans-serif;
     color: white
 }
+
+#closeBtn {
+    float: right;
+}
