@@ -42,7 +42,6 @@ function getVideo() {
     },
     error: function (response) {
       console.log("Request Failed");
-
     }
 
   });
@@ -73,7 +72,11 @@ function bandModalInfo() {
     // artistImage.attr('src', data.image_url);//where the band image will appear
   });
   $.ajax({
+<<<<<<< HEAD
     url: "https://rest.bandsintown.com/artists/" +artistInput+ "/events/?app_id=9ebc2dc78f69f44da1e78195877b2314",
+=======
+    url: proxyUrl + "https://www.mediawiki.org/w/api.php?action=query&format=json&titles=Main%20page&srsearch=Kitten",
+>>>>>>> modal-setup
     method: "GET"
   }).then(function (data) {
     console.log(data);
