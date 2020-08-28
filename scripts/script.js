@@ -14,7 +14,7 @@ function createLI() {
   var liEl = $("<li>");
   liEl.text($("#user-input").val());
   liEl.on("click", function(event) {
-
+    console.log(event)
   });
   return liEl;
   
