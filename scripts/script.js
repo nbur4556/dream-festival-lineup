@@ -42,7 +42,6 @@ function getVideo() {
     },
     error: function (response) {
       console.log("Request Failed");
-
     }
 
   });
@@ -63,7 +62,7 @@ function bandModalInfo() {
   const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
   $.ajax({
-    url: proxyUrl + "https://www.mediawiki.org/w/api.php?action=query&format=json&titles=Main%20page",
+    url: proxyUrl + "https://www.mediawiki.org/w/api.php?action=query&format=json&titles=Main%20page&srsearch=Kitten",
     method: "GET"
   }).then(function (data) {
     console.log(data);
