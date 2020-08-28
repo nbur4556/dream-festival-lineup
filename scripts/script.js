@@ -61,7 +61,8 @@ function embedVideo(data) {
 
 function bandModalInfo() {
 
-  let artistInput = "The Shivas"
+  let artistInput = "The Shivas";
+  let artistImage = $("<img>");
 
   $.ajax({
     url: "https://rest.bandsintown.com/artists/" +artistInput+ "/?app_id=9ebc2dc78f69f44da1e78195877b2314",
@@ -69,16 +70,16 @@ function bandModalInfo() {
   }).then(function (data) {
     console.log(data);
     // $("").text(data.name);//where the band name will appear
-    // $("").append(data.image_url);//where the band image will appear
+    // artistImage.attr('src', data.image_url);//where the band image will appear
   });
   $.ajax({
     url: "https://rest.bandsintown.com/artists/" +artistInput+ "/events/?app_id=9ebc2dc78f69f44da1e78195877b2314",
     method: "GET"
   }).then(function (data) {
     console.log(data);
-    $("").text(data.datetime)//date of upcoming show
-    $("").text(data.venue.city)//city next show is held
-    $("").text(data.venue.region)//state next show is held
+    // $("").text(data[i].datetime)//date of upcoming show
+    // $("").text(data[i].venue.city)//city next show is held
+    // $("").text(data[i].venue.region)//state next show is held
 
   });
 
