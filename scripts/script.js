@@ -13,5 +13,10 @@ $(document).ready(function () {
 function createLI() {
   var liEl = $("<li>");
   liEl.text($("#user-input").val());
+  liEl.on("click", function(event) {
+
+  });
   return liEl;
+  
 }
+
