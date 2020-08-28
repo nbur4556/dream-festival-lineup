@@ -68,6 +68,10 @@ function bandModalInfo() {
     method: "GET"
   }).then(function (data) {
     console.log(data);
+    $("").text(data.name);//where the band name will appear
+    $("").append(data.image_url);//where the band image will appear
+
+
   });
 }
 
