@@ -9,6 +9,7 @@ $(document).ready(function () {
     LI.addClass("inline-block px-3");
     $("#artist").append(LI);
   });
+  getVideo();
 });
 function createLI() {
   var liEl = $("<li>");
@@ -17,6 +18,10 @@ function createLI() {
     console.log(event)
   });
   return liEl;
+  
+  
+    
+  }
   
   function getVideo() {
     $.ajax({
@@ -29,25 +34,30 @@ function createLI() {
           maxResults: 1,
           type: 'video',
           videoEmbeddable: true,
+          
       },
+      
       success: function(data){
           embedVideo(data)
+          console.log(data)
       },
       error: function(response){
           console.log("Request Failed");
           
         }
+        
       });
-    
+      
   }
   function embedVideo(data) {
-    $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
-    $('h3').text(data.items[0].snippet.title)
-    $('.description').text(data.items[0].snippet.description)
-    getVideo();
-  }
+    
+    var videoTag = $("<iframe>");
+    
+    videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
+    $('h3').text(data.items[0].snippet.title);
+    $('.description').text(data.items[0].snippet.description);
   
-
-   
+   $(".videoSection").append(videoTag);
 }
+
 
