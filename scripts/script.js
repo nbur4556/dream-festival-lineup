@@ -60,10 +60,11 @@ function embedVideo(data) {
 }
 
 function bandModalInfo() {
-  const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+
+  let artistInput = "The Shivas"
 
   $.ajax({
-    url: proxyUrl + "https://www.mediawiki.org/w/api.php?action=query&format=json&titles=Main%20page",
+    url: "https://rest.bandsintown.com/artists/" +artistInput+ "/?app_id=9ebc2dc78f69f44da1e78195877b2314",
     method: "GET"
   }).then(function (data) {
     console.log(data);
