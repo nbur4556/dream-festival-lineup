@@ -29,7 +29,7 @@ function createLI() {
       url: 'https://www.googleapis.com/youtube/v3/search',
       data: {
           key: 'AIzaSyDOkXFMR8ZGNDjvtvYUmbl0Q5_jh2CLCW8',
-          q: "madonna",
+          q: "Britney Spears",
           part: 'snippet',
           maxResults: 1, 
           type: 'video',

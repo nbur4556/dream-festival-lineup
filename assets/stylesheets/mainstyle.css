@@ -1,20 +1,29 @@
-#poster{
-    background-image: url("../images/poster-background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+#poster {
+  background-image: url("../images/poster-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
+  /* Poster image size is 765x976 px */
+  width: 765px;
+  height: 976px;
 
-    /* Poster image size is 765x976 px */
-    width: 765px;
-    height: 976px;
-
-    font-family: 'Francois One', sans-serif;
-    color : white
-    }
-#headlinerBtn {font-family: 'Francois One', sans-serif;
-               color: white 
+  font-family: "Francois One", sans-serif;
+  color: white;
 }
-#artistBtn {font-family: 'Francois One', sans-serif;
-    color: white
+#headlinerBtn {
+  font-family: "Francois One", sans-serif;
+  color: white;
+}
+#artistBtn {
+  font-family: "Francois One", sans-serif;
+  color: white;
+}
+.videoSection {
+  font-family: "Francois One", sans-serif;
+  color: white
+}
+
+body {
+  background-color: black;
 }
