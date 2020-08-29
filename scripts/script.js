@@ -18,7 +18,7 @@ function createLI() {
   var liEl = $("<li>");
   liEl.text($("#user-input").val());
   liEl.on("click", function (event) {
-    // console.log(event)
+    toggleBox();
   });
   return liEl;
 }
@@ -104,7 +104,7 @@ function toggleBox(){
     if (modal.hasClass("visible") === true){
       modal.removeClass("visible").addClass("invisible");
     } else if (modal.hasClass("invisible") === true){
-      modal.removeClass("invsible").addClass("visible");
+      modal.removeClass("invisible").addClass("visible");
     }
     }
     
