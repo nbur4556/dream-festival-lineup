@@ -22,15 +22,10 @@
       <!--Poster-->
       <section id="poster" class="grid grid-cols-12 col-span-8 row-span-5 gap-2 p-3">
         <!-- Headliners -->
-
-        <ul id="headliner" class="col-span-3 text-center">
-
-        </ul>
+        <ul id="headliner" class="col-span-3 text-center"></ul>
 
         <!-- Artists -->
-        <ul id="artist" class="col-span-9 text-center">
-
-        </ul>
+        <ul id="artist" class="col-span-9 text-center"></ul>
       </section>
 
       <!-- User Input -->
@@ -48,9 +43,7 @@
 
       <section class="videoSection">
         <h3>Video Title</h3>
-        <p class="description">Video Description
-        <p>
-
+        <p class="description">Video Description</p>
       </section>
     </article>
 
@@ -58,9 +51,12 @@
 
     <article class="flex justify-center fixed top-0 visible" id="modal">
       <section id="modal-overlay" class="bg-gray-900 z-40"></section>
-      <section id="modal-box" class="absolute top-0 bg-white p-3 w-6/12 h-64 z-50">
+      <section id="modal-box" class="absolute top-0 bg-white p-3 w-6/12 z-50">
         <img id="closeBtn" class='w-5' src="./assets/images/close-btn.png" />
-
+        <section class="flex">
+          <div id="artist-info"></div>
+          <div id="event-info"></div>
+        </section>
       </section>
     </article>
 

@@ -60,9 +60,7 @@ function embedVideo(data) {
 }
 
 function bandModalInfo() {
-
   let artistInput = "Styx";
-  let artistImage = $("<img>");
 
   //Artist Info AJAX Call
   $.ajax({
@@ -75,22 +73,10 @@ function bandModalInfo() {
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/events/?app_id=9ebc2dc78f69f44da1e78195877b2314",
     method: "GET"
   }).then(appendEventsToModal);
-
-  //   //need a for loop for five shows to display on modal
-  //   for (var i = 0; i < dateArr.length; i++) {
-
-  //   }
-
-  //   // $("").text(data[i].datetime)//date of upcoming show
-  //   // $("").text(data[i].venue.city)//city next show is held
-  //   // $("").text(data[i].venue.region)//state next show is held
-  // }
-  // );
-
 }
 
 function appendArtistToModal(data) {
-  const modal = $("#modal-box");
+  const modal = $("#artist-info");
   const nameItem = $('<h3>');
   const imageItem = $('<img>');
 
@@ -104,7 +90,7 @@ function appendArtistToModal(data) {
 }
 
 function appendEventsToModal(data) {
-  const modal = $("#modal-box");
+  const modal = $("#event-info");
   const locationItem = $('<section>');
 
   let dateArr = [data[0].datetime, data[1].datetime, data[2].datetime, data[3].datetime, data[4].datetime];
@@ -119,14 +105,9 @@ function appendEventsToModal(data) {
   }
 
   modal.append(locationItem);
-
-  console.log(dateArr);
-  console.log(citiesArr);
-  console.log(statesArr);
 }
 
 function toggleBox() {
-
   let modal = $("#modal");
 
   if (modal.hasClass("visible") === true) {
