@@ -60,7 +60,7 @@ function embedVideo(data) {
 }
 
 function bandModalInfo() {
-  let artistInput = "Styx";
+  let artistInput = "Paramore";
 
   //Artist Info AJAX Call
   $.ajax({
@@ -76,26 +76,32 @@ function bandModalInfo() {
 }
 
 function appendArtistToModal(data) {
-  const modal = $("#artist-info");
+  const modalArtistSection = $("#artist-info");
   const nameItem = $('<h3>');
   const imageItem = $('<img>');
 
-  console.log(modal);
-
+  //Set Content
   nameItem.text(data.name);
   imageItem.attr('src', data.image_url);
 
-  modal.append(nameItem);
-  modal.append(imageItem);
+  //Set Classes
+  nameItem.addClass('text-2xl');
+  imageItem.addClass('w-64 rounded m-3');
+
+  //Add to modal
+  modalArtistSection.append(nameItem);
+  modalArtistSection.append(imageItem);
 }
 
 function appendEventsToModal(data) {
-  const modal = $("#event-info");
+  const modalEventsSection = $("#event-info");
   const locationItem = $('<section>');
 
   let dateArr = [data[0].datetime, data[1].datetime, data[2].datetime, data[3].datetime, data[4].datetime];
   let citiesArr = [data[0].venue.city, data[1].venue.city, data[2].venue.city, data[3].venue.city, data[4].venue.city];
   let statesArr = [data[0].venue.region, data[1].venue.region, data[2].venue.region, data[3].venue.region, data[4].venue.region];
+
+  locationItem.append($("<p class='text-xl mb-2'>Upcoming Events:</p>"));
 
   //Append city and state
   for (let i = 0; i < 5; i++) {
@@ -104,7 +110,7 @@ function appendEventsToModal(data) {
     locationItem.append(cityState);
   }
 
-  modal.append(locationItem);
+  modalEventsSection.append(locationItem);
 }
 
 function toggleBox() {
