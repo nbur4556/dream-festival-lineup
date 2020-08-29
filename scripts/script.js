@@ -19,7 +19,6 @@ function createLI() {
   liEl.text($("#user-input").val());
   liEl.on("click", function (event) {
     toggleBox();
-    // console.log(event.target.textContent);
     bandModalInfo(event.target.textContent);
   });
   return liEl;
