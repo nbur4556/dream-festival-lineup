@@ -61,6 +61,7 @@ function embedVideo(data) {
 
 function bandModalInfo() {
 
+
   let artistInput = "Styx";
   let artistImage = $("<img>");
 
@@ -77,13 +78,18 @@ function bandModalInfo() {
     method: "GET"
   }).then(function (data) {
     console.log(data);
+    
 
     dateArr = [data[0].datetime, data[1].datetime, data[2].datetime, data[3].datetime, data[4].datetime];
     citiesArr = [data[0].venue.city, data[1].venue.city, data[2].venue.city, data[3].venue.city, data[4].venue.city];
     statesArr = [data[0].venue.region, data[1].venue.region, data[2].venue.region, data[3].venue.region, data[4].venue.region]
-    console.log(dateArr);
-    console.log(citiesArr);
-    console.log(statesArr);
+    
+    console.log(formatDate(dateArr[0]));
+    
+    // console.log(dateArr);
+    // console.log(citiesArr);
+    // console.log(statesArr);
+    // console.log(tourDates);
     //need a for loop for five shows to display on modal
     for (var i = 0; i < dateArr.length; i++){
 
@@ -107,6 +113,25 @@ function toggleBox(){
       modal.removeClass("invisible").addClass("visible");
     }
     }
+    
+function formatDate(string){
+  
+  let tourDates = moment();
+  tourDates.year(string.substring(0, 4))
+  tourDates.month(string.substring(5, 7) - 1)
+  tourDates.date(string.substring(8, 10))
+  tourDates.hour(string.substring(11, 13))
+  tourDates.minute(string.substring(14, 16))
+
+  return tourDates.format('MMMM Do YYYY, h:mm a');
+
+
+  console.log(tourDates);
+
+  console.log(string);
+
+
+}
     
 
 
