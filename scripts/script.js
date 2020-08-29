@@ -10,7 +10,7 @@ $(document).ready(function () {
     $("#artist").append(LI);
   });
   // getVideo();
-  bandModalInfo();
+
   $("#closeBtn").on("click", toggleBox);
 });
 
@@ -19,6 +19,8 @@ function createLI() {
   liEl.text($("#user-input").val());
   liEl.on("click", function (event) {
     toggleBox();
+    // console.log(event.target.textContent);
+    bandModalInfo(event.target.textContent);
   });
   return liEl;
 }
@@ -59,9 +61,7 @@ function embedVideo(data) {
   $(".videoSection").append(videoTag);
 }
 
-function bandModalInfo() {
-  let artistInput = "Paramore";
-
+function bandModalInfo(artistInput) {
   //Artist Info AJAX Call
   $.ajax({
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/?app_id=9ebc2dc78f69f44da1e78195877b2314",
@@ -80,6 +80,8 @@ function appendArtistToModal(data) {
   const nameItem = $('<h3>');
   const imageItem = $('<img>');
 
+  modalArtistSection.empty();
+
   //Set Content
   nameItem.text(data.name);
   imageItem.attr('src', data.image_url);
@@ -96,6 +98,8 @@ function appendArtistToModal(data) {
 function appendEventsToModal(data) {
   const modalEventsSection = $("#event-info");
   const locationItem = $('<section>');
+
+  modalEventsSection.empty();
 
   let dateArr = [data[0].datetime, data[1].datetime, data[2].datetime, data[3].datetime, data[4].datetime];
   let citiesArr = [data[0].venue.city, data[1].venue.city, data[2].venue.city, data[3].venue.city, data[4].venue.city];
