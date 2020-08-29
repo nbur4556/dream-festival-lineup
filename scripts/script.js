@@ -64,41 +64,28 @@ function bandModalInfo() {
   let artistInput = "Styx";
   let artistImage = $("<img>");
 
+  //Artist Info AJAX Call
   $.ajax({
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/?app_id=9ebc2dc78f69f44da1e78195877b2314",
     method: "GET"
-  }).then(function (data) {
-    console.log(data);
+  }).then(appendArtistToModal);
 
-    // $("#modal-box").text(data.name);//where the band name will appear
-    // artistImage.attr('src', data.image_url);//where the band image will appear
-
-    appendArtistToModal(data);
-  });
+  //Event Info AJAX Call
   $.ajax({
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/events/?app_id=9ebc2dc78f69f44da1e78195877b2314",
     method: "GET"
-  }).then(function (data) {
-    // console.log(data);
+  }).then(appendEventsToModal);
 
-    dateArr = [data[0].datetime, data[1].datetime, data[2].datetime, data[3].datetime, data[4].datetime];
-    citiesArr = [data[0].venue.city, data[1].venue.city, data[2].venue.city, data[3].venue.city, data[4].venue.city];
-    statesArr = [data[0].venue.region, data[1].venue.region, data[2].venue.region, data[3].venue.region, data[4].venue.region]
-    // console.log(dateArr);
-    // console.log(citiesArr);
-    // console.log(statesArr);
+  //   //need a for loop for five shows to display on modal
+  //   for (var i = 0; i < dateArr.length; i++) {
 
+  //   }
 
-
-    //need a for loop for five shows to display on modal
-    for (var i = 0; i < dateArr.length; i++) {
-
-    }
-
-    // $("").text(data[i].datetime)//date of upcoming show
-    // $("").text(data[i].venue.city)//city next show is held
-    // $("").text(data[i].venue.region)//state next show is held
-  });
+  //   // $("").text(data[i].datetime)//date of upcoming show
+  //   // $("").text(data[i].venue.city)//city next show is held
+  //   // $("").text(data[i].venue.region)//state next show is held
+  // }
+  // );
 
 }
 
@@ -107,11 +94,35 @@ function appendArtistToModal(data) {
   const nameItem = $('<h3>');
   const imageItem = $('<img>');
 
+  console.log(modal);
+
   nameItem.text(data.name);
   imageItem.attr('src', data.image_url);
 
   modal.append(nameItem);
   modal.append(imageItem);
+}
+
+function appendEventsToModal(data) {
+  const modal = $("#modal-box");
+  const locationItem = $('<section>');
+
+  let dateArr = [data[0].datetime, data[1].datetime, data[2].datetime, data[3].datetime, data[4].datetime];
+  let citiesArr = [data[0].venue.city, data[1].venue.city, data[2].venue.city, data[3].venue.city, data[4].venue.city];
+  let statesArr = [data[0].venue.region, data[1].venue.region, data[2].venue.region, data[3].venue.region, data[4].venue.region];
+
+  //Append city and state
+  for (let i = 0; i < 5; i++) {
+    let cityState = $("<p>");
+    cityState.text(`${citiesArr[i]}, ${statesArr[i]}: ${dateArr[i]}`);
+    locationItem.append(cityState);
+  }
+
+  modal.append(locationItem);
+
+  console.log(dateArr);
+  console.log(citiesArr);
+  console.log(statesArr);
 }
 
 function toggleBox() {
