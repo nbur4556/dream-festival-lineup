@@ -109,7 +109,8 @@ function appendEventsToModal(data) {
   //Append city and state
   for (let i = 0; i < 5; i++) {
     let cityState = $("<p>");
-    cityState.text(`${citiesArr[i]}, ${statesArr[i]}: ${dateArr[i]}`);
+    cityState.text(`${citiesArr[i]}, ${statesArr[i]}: ${formatDate(dateArr[i])}`);
+    cityState.addClass('mb-2');
     locationItem.append(cityState);
   }
 
@@ -124,6 +125,17 @@ function toggleBox() {
   } else if (modal.hasClass("invisible") === true) {
     modal.removeClass("invisible").addClass("visible");
   }
+}
+
+function formatDate(string) {
+  let tourDates = moment();
+  tourDates.year(string.substring(0, 4))
+  tourDates.month(string.substring(5, 7) - 1)
+  tourDates.date(string.substring(8, 10))
+  tourDates.hour(string.substring(11, 13))
+  tourDates.minute(string.substring(14, 16))
+
+  return tourDates.format('MMMM Do YYYY, h:mm a');
 }
 
 
