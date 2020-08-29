@@ -11,6 +11,7 @@ $(document).ready(function () {
   });
   // getVideo();
   bandModalInfo();
+  $("#closeBtn").on("click", toggleBox);
 });
 
 function createLI() {
@@ -95,5 +96,18 @@ function bandModalInfo() {
   });
 
 }
+
+function toggleBox(){
+
+  let modal = $("#modal");
+
+    if (modal.hasClass("visible") === true){
+      modal.removeClass("visible").addClass("invisible");
+    } else if (modal.hasClass("invisible") === true){
+      modal.removeClass("invsible").addClass("visible");
+    }
+    }
+    
+
 
 
