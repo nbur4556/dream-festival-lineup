@@ -113,8 +113,33 @@ function appendEventsToModal(data) {
     cityState.addClass('mb-2');
     locationItem.append(cityState);
   }
-
-  modalEventsSection.append(locationItem);
+    modalEventsSection.append(locationItem);
+}
+  
+  function getVideo() {
+    $.ajax({
+      type: 'GET',
+      url: 'https://www.googleapis.com/youtube/v3/search',
+      data: {
+          key: 'AIzaSyDOkXFMR8ZGNDjvtvYUmbl0Q5_jh2CLCW8',
+          q: "Britney Spears",
+          part: 'snippet',
+          maxResults: 1, 
+          type: 'video',
+          videoEmbeddable: true,
+          
+      },
+      
+      success: function(data){
+          embedVideo(data)
+          console.log(data)
+      },
+      error: function(response){
+          console.log("Request Failed");
+          
+        }
+        
+      });
 }
 
 function toggleBox() {
@@ -125,7 +150,6 @@ function toggleBox() {
   } else if (modal.hasClass("invisible") === true) {
     modal.removeClass("invisible").addClass("visible");
   }
-}
 
 function formatDate(string) {
   let tourDates = moment();
@@ -137,7 +161,3 @@ function formatDate(string) {
 
   return tourDates.format('MMMM Do YYYY, h:mm a');
 }
-
-
-
-
