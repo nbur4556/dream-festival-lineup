@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid/Quarantine City Limits</title>
+    <title>Covid City Limits</title>
 
     <!-- Frameworks -->
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
@@ -15,22 +15,20 @@
     <!-- Stylesheets -->
     <link href="./assets/stylesheets/mainstyle.css" rel="stylesheet" />
   </head>
-
+  <!--guitar string icon-->
+  <img src="https://img.icons8.com/color/48/000000/guitar-strings.png"/>
+<!--Start of body-->
   <body>
     <header>COVID City Limits</header>
+    <!--guitar string icon-->
     <article class="grid grid-cols-12 gap-2 m-5">
       <!--Poster-->
       <section id="poster" class="grid grid-cols-12 col-span-8 row-span-5 gap-2 p-3">
         <!-- Headliners -->
-
-        <ul id="headliner" class="col-span-3 text-center">
-
-        </ul>
+        <ul id="headliner" class="col-span-3 text-center"></ul>
 
         <!-- Artists -->
-        <ul id="artist" class="col-span-9 text-center">
-
-        </ul>
+        <ul id="artist" class="col-span-9 text-center"></ul>
       </section>
 
       <!-- User Input -->
@@ -38,23 +36,42 @@
         <input type="text" placeholder="Artist Name" class="w-full" id="user-input" />
         <div class="flex justify-end">
           <button class="bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded m-2" id="headlinerBtn">
-            Add as Headliner
+            Add a Headliner
           </button>
-          <button class="bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded m-2" id="artistBtn">
-            Add as Artist
+          <button class="bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded m-2" id="artistBtn" >
+            Add an Artist
           </button>
         </div>
       </section>
 
-      <section class="bg-blue-500 col-span-4">playlist</section>
+      <section class="videoSection grid col-span-3">
+        <h3>Video Title</h3>
+        <!-- <p class="description">Video Description<p> -->
+      </section>
     </article>
 
-    <!-- Scripts -->
-    <script src="http://code.jquery.com/jquery-3.5.1.slim.js"
-      integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-    <script src="./scripts/config.js" type="text/javasctipt"></script>
-    <script src="scripts/script.js" type="text/javascript"></script>
+    <!-- Modal -->
 
+    <article class="flex justify-center fixed top-0 invisible" id="modal">
+      <section id="modal-overlay" class="bg-gray-900 z-40"></section>
+      <section id="modal-box" class="absolute top-0 bg-white rounded p-3 z-50">
+        <img id="closeBtn" class='w-5' src="./assets/images/close-btn.png" />
+        <section class="flex">
+          <div id="artist-info" class="p-5"></div>
+          <div id="event-info" class="p-5"></div>
+        </section>
+      </section>
+    </article>
+
+
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./scripts/config.js" type="text/javascript"></script>
+    <script src="scripts/script.js" type="text/javascript"></script>
+<!--guitar strings link -->
+<a href="https://icons8.com/icon/y776lZluQLn3/guitar-strings">Guitar Strings icon by Icons8</a>
   </body>
 
 </html>

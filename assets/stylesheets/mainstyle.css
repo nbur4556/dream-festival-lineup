@@ -1,3 +1,13 @@
+body {
+  background-color: black;
+}
+header {
+    color: white;
+}
+.videoSection {
+  font-family: "Francois One", sans-serif;
+  color: white
+}
 #poster {
     background-image: url("../images/poster-background.png");
     background-size: cover;
@@ -10,24 +20,23 @@
   
     font-family: "Francois One", sans-serif;
     color: white;
-  }
-  #headlinerBtn {
-    font-family: "Francois One", sans-serif;
-    color: white;
-  }
-  #artistBtn {
-    font-family: "Francois One", sans-serif;
-    color: white;
-  }
-  .videoSection {
-    font-family: "Francois One", sans-serif;
-    color: white
-  }
-  
-  body {
-    background-color: black;
-  }
-
-  header {
-    color: white;
-  }
+}
+#modal-overlay{
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+}
+#modal-box{
+    margin-top: 30vh;
+}
+#headlinerBtn {
+  font-family: "Francois One", sans-serif;
+  color: white;
+}
+#artistBtn {
+  font-family: "Francois One", sans-serif;
+  color: white;
+}
+#closeBtn {
+    float: right;
+}
