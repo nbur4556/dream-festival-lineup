@@ -9,7 +9,7 @@ $(document).ready(function () {
     LI.addClass("inline-block px-3");
     $("#artist").append(LI);
   });
-  // getVideo();
+  getVideo();
 
   $("#closeBtn").on("click", toggleBox);
 });
@@ -30,7 +30,7 @@ function getVideo() {
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
       key: 'AIzaSyDOkXFMR8ZGNDjvtvYUmbl0Q5_jh2CLCW8',
-      q: "cats",
+      q: "Cher",
       part: 'snippet',
       maxResults: 1,
       type: 'video',
@@ -116,31 +116,7 @@ function appendEventsToModal(data) {
     modalEventsSection.append(locationItem);
 }
   
-  function getVideo() {
-    $.ajax({
-      type: 'GET',
-      url: 'https://www.googleapis.com/youtube/v3/search',
-      data: {
-          key: 'AIzaSyDOkXFMR8ZGNDjvtvYUmbl0Q5_jh2CLCW8',
-          q: "Britney Spears",
-          part: 'snippet',
-          maxResults: 1, 
-          type: 'video',
-          videoEmbeddable: true,
-          
-      },
-      
-      success: function(data){
-          embedVideo(data)
-          console.log(data)
-      },
-      error: function(response){
-          console.log("Request Failed");
-          
-        }
-        
-      });
-}
+  
 
 function toggleBox() {
   let modal = $("#modal");
@@ -158,6 +134,6 @@ function formatDate(string) {
   tourDates.date(string.substring(8, 10))
   tourDates.hour(string.substring(11, 13))
   tourDates.minute(string.substring(14, 16))
-
+}
   return tourDates.format('MMMM Do YYYY, h:mm a');
 }
