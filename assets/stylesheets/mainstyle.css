@@ -1,8 +1,17 @@
+/* adding ACL font */
+@font-face {
+  font-family: "ACLtheme";
+  src: url(dream-festival-lineup/assets/stylesheets/ACLfont.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   background-color: black;
 }
 header {
     color: white;
+    font-family: "ACLtheme";
 }
 .videoSection {
   font-family: "Francois One", sans-serif;
