@@ -28,6 +28,9 @@ header {
 }
 #modal-box{
     margin-top: 30vh;
+    background-color: lightgrey;
+    font-family: "Francois One", sans-serif;
+    opacity: 90%;
 }
 #headlinerBtn {
   font-family: "Francois One", sans-serif;
