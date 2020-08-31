@@ -117,7 +117,7 @@ function appendEventsToModal(data) {
 }
 
 function removeArtist(){
-  
+  $("#removeBtn").remove(liEL);
 }
 
 function getVideo() {
