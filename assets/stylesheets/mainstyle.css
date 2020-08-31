@@ -1,11 +1,10 @@
 body {
   background-color: black;
 }
-header {
+.title {
     color: white;
     font-family: 'Monoton', cursive;
     font-size: 50px;
-    margin-left: 20px;
 }
 .videoSection {
   font-family: "Francois One", sans-serif;
@@ -48,5 +47,12 @@ header {
   width: 60px;
   height: 60px;
   margin-top: 5px;
+  margin-left: 10px;
+}
+
+#intro {
+  font-family: "Francois One", sans-serif;
+  color: white;
+  margin-left: 20px;
 }
 
