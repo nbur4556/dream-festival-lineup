@@ -116,6 +116,10 @@ function appendEventsToModal(data) {
   modalEventsSection.append(locationItem);
 }
 
+function removeArtist(){
+  
+}
+
 function getVideo() {
   $.ajax({
     type: 'GET',
