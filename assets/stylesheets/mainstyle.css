@@ -44,3 +44,9 @@ header {
     float: right;
 }
 
+.guitar-strings {
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+}
+
