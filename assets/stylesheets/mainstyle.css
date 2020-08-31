@@ -1,8 +1,10 @@
 body {
   background-color: black;
 }
-header {
+.title {
     color: white;
+    font-family: 'Monoton', cursive;
+    font-size: 55px;
 }
 .videoSection {
   font-family: "Francois One", sans-serif;
@@ -43,3 +45,17 @@ header {
 #closeBtn {
     float: right;
 }
+
+.guitar-strings {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#intro {
+  font-family: "Francois One", sans-serif;
+  color: white;
+  margin-left: 20px;
+}
+
