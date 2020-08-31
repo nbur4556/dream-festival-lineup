@@ -31,11 +31,11 @@ header {
 }
 #headlinerBtn {
   font-family: "Francois One", sans-serif;
-  color: rgb(231, 13, 13);
+  color: black;
 }
 #artistBtn {
   font-family: "Francois One", sans-serif;
-  color:rgb(231, 13, 13);
+  color:black;
 }
 #closeBtn {
     float: right;
