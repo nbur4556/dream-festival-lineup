@@ -29,14 +29,18 @@ header {
 #modal-box{
     margin-top: 30vh;
 }
-#headlinerBtn {
+#button {
   font-family: "Francois One", sans-serif;
   color: black;
 }
-#artistBtn {
+#button {
   font-family: "Francois One", sans-serif;
   color:black;
 }
 #closeBtn {
     float: right;
+}
+
+h3 {
+color:rgb(240, 201, 104)
 }
