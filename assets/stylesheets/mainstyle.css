@@ -1,11 +1,3 @@
-/* adding ACL font */
-@font-face {
-  font-family: "ACLtheme";
-  src: url(dream-festival-lineup/assets/stylesheets/ACLfont.ttf);
-  font-weight: bold;
-  font-style: normal;
-}
-
 body {
   background-color: black;
 }
