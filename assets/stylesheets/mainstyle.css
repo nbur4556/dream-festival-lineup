@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 header {
-    color: white;
+    color: rgb(90, 5, 5);
 }
 .videoSection {
   font-family: "Francois One", sans-serif;
@@ -31,11 +31,11 @@ header {
 }
 #headlinerBtn {
   font-family: "Francois One", sans-serif;
-  color: white;
+  color: rgb(231, 13, 13);
 }
 #artistBtn {
   font-family: "Francois One", sans-serif;
-  color: white;
+  color:rgb(231, 13, 13);
 }
 #closeBtn {
     float: right;
