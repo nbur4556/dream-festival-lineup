@@ -81,11 +81,15 @@ function removeArtist(artistInput) {
   const artist = $("#artist")
 
   headLiner.children().each(function (i, child) {
-    console.log(child.textContent);
+    if (child.textContent == artistInput) {
+      child.parentElement.removeChild(child.parentElement.childNodes[i]);
+    }
   });
 
   artist.children().each(function (i, child) {
-    console.log(child.textContent);
+    if (child.textContent == artistInput) {
+      child.parentElement.removeChild(child.parentElement.childNodes[i]);
+    }
   });
 }
 function appendArtistToModal(data) {
