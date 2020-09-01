@@ -72,6 +72,9 @@ function bandModalInfo(artistInput) {
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/events/?app_id=9ebc2dc78f69f44da1e78195877b2314",
     method: "GET"
   }).then(appendEventsToModal);
+  $("#remove-button").on("click", function (){
+console.log("click")
+  })
 }
 
 function appendArtistToModal(data) {
