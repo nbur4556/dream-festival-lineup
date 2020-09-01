@@ -1,8 +1,14 @@
 body {
   background-color: black;
 }
-header {
-    color: rgb(90, 5, 5);
+
+footer {
+  color: white;
+}
+.title {
+    color: white;
+    font-family: 'Monoton', cursive;
+    font-size: 55px;
 }
 .videoSection {
   font-family: "Francois One", sans-serif;
@@ -28,6 +34,9 @@ header {
 }
 #modal-box{
     margin-top: 30vh;
+    background-color: lightgrey;
+    font-family: "Francois One", sans-serif;
+    opacity: 90%;
 }
 #button {
   font-family: "Francois One", sans-serif;
@@ -41,6 +50,19 @@ header {
     float: right;
 }
 
+
 h3 {
 color:rgb(240, 201, 104)
+}
+.guitar-strings {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#intro {
+  font-family: "Francois One", sans-serif;
+  color: white;
+  margin-left: 20px;
 }
