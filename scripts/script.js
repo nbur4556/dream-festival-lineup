@@ -77,12 +77,16 @@ function bandModalInfo(artistInput) {
   }) 
 }
 function removeArtist(artistInput) {
-var headLiner = $("#headliner")
-var artist = $("#artist")
-for (let i = 0; i < headLiner.length; i++) {
-  const element = array[index];
-  
-}
+  var headLiner = $("#headliner")
+  var artist = $("#artist")
+    for (let i = 0; i < headLiner.length; i++) {
+      const element = array[index];
+      
+    }
+    for (let i = 0; i < artist.length; i++) {
+      const element = array[i];
+      
+    }
 }
 function appendArtistToModal(data) {
   const modalArtistSection = $("#artist-info");
