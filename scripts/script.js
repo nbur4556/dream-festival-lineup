@@ -9,7 +9,7 @@ $(document).ready(function () {
     LI.addClass("inline-block px-3");
     $("#artist").append(LI);
   });
-  getVideo();
+  // getVideo();
 
   $("#closeBtn").on("click", toggleBox);
 });
@@ -25,45 +25,61 @@ function createLI() {
 }
 // Youtube API
 
-function getVideo() {
-  $.ajax({
-    type: 'GET',
-    url: 'https://www.googleapis.com/youtube/v3/search',
-    data: {
-      key: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
-      q: "cats",
-      part: 'snippet',
-      maxResults: 1,
-      type: 'video',
-      videoEmbeddable: true,
-      id: 'videoId'
+// function getVideo() {
+//   $.ajax({
+//     type: 'GET',
+//     url: 'https://www.googleapis.com/youtube/v3/search',
+//     data: {
+//       key: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
+//       q: "cats",
+//       part: 'snippet',
+//       maxResults: 1,
+//       type: 'video',
+//       videoEmbeddable: true,
+//       id: 'videoId'
 
-    },
+//     },
     
 
-    success: function (data) {
-      embedVideo(data)
-      console.log(data)
-    },
-    error: function (response) {
-      console.log("Request Failed");
+//     success: function (data) {
+//       embedVideo(data)
+//       console.log(data)
+//     },
+//     error: function (response) {
+//       console.log("Request Failed");
+//     }
+
+//   });
+
+// }
+$(document).yTThumbnail({
+
+  // Specify the API key
+  apiKey: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
+
+  // Specify the video ID
+  videoID: 'ZQ_6Xo8cqxk',
+  callback: function(thumbnails) {
+    // Add the best quality image
+    // $('.video-thumbs').append('<p>Best Quality</p><img src=' + bestQuality.url + 'title="Best quality - Image size:' + bestQuality.width + 'x' + bestQuality.height + '>');
+    for (thumbnail in thumbnails) {
+      $('.video-thumbs').append('<img src="' + thumbnails[thumbnail].url + '" title="Image size:' + thumbnails[thumbnail].width + 'x' + thumbnails[thumbnail].height + '">');
     }
+  }
+  
+});
+// function linkVideo(data) {
+//   var videoLnk = $();
+// } 
+// function embedVideo(data) {
+//   var videoTag = $("<iframe>");
 
-  });
+//   videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId).thumbnail;
+//   $('h3').text(data.items[0].snippet.title);
+//   $('.description').text(data.items[0].snippet.description);
 
-}
-function linkVideo(data) {
-  var videoLnk = $();
-} 
-function embedVideo(data) {
-  var videoTag = $("<iframe>");
-
-  videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId).thumbnail;
-  $('h3').text(data.items[0].snippet.title);
-  $('.description').text(data.items[0].snippet.description);
-
-  $(".videoSection").append(videoTag);
-}
+//   $(".videoSection").append(videoTag);
+// }
 
 function bandModalInfo(artistInput) {
   //Artist Info AJAX Call
