@@ -73,10 +73,17 @@ function bandModalInfo(artistInput) {
     method: "GET"
   }).then(appendEventsToModal);
   $("#remove-button").on("click", function (){
-console.log("click")
-  })
+  removeArtist(artistInput)
+  }) 
 }
-
+function removeArtist(artistInput) {
+var headLiner = $("#headliner")
+var artist = $("#artist")
+for (let i = 0; index < array.length; index++) {
+  const element = array[index];
+  
+}
+}
 function appendArtistToModal(data) {
   const modalArtistSection = $("#artist-info");
   const nameItem = $('<h3>');
