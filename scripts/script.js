@@ -9,7 +9,7 @@ $(document).ready(function () {
     LI.addClass("inline-block px-3");
     $("#artist").append(LI);
   });
-  // getVideo();
+  getVideo();
 
   $("#closeBtn").on("click", toggleBox);
 });
@@ -23,19 +23,18 @@ function createLI() {
   });
   return liEl;
 }
+// Youtube API
 
-
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
 function getVideo() {
   $.ajax({
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
-      key: 'AIzaSyDOkXFMR8ZGNDjvtvYUmbl0Q5_jh2CLCW8',
-      q: "Cher",ß
+      key: 'AIzaSyBsc8RIKQMuscMBNLx6C3PWZTYDBrCH4xI',
+      q: "cats",
       part: 'snippet',
+
+      
       maxResults: 1,
       type: 'video',
       videoEmbeddable: true,
@@ -44,7 +43,7 @@ function getVideo() {
 
     success: function (data) {
       embedVideo(data)
-      // console.log(data)
+      console.log(data)
     },
     error: function (response) {
       console.log("Request Failed");
@@ -57,7 +56,7 @@ function getVideo() {
 function embedVideo(data) {
   var videoTag = $("<iframe>");
 
-  videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
+  videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId).thumbnail;
   $('h3').text(data.items[0].snippet.title);
   $('.description').text(data.items[0].snippet.description);
 
@@ -117,10 +116,8 @@ function appendEventsToModal(data) {
     cityState.addClass('mb-2');
     locationItem.append(cityState);
   }
-    modalEventsSection.append(locationItem);
+  modalEventsSection.append(locationItem);
 }
-  
-  
 
 function toggleBox() {
   let modal = $("#modal");
@@ -130,6 +127,7 @@ function toggleBox() {
   } else if (modal.hasClass("invisible") === true) {
     modal.removeClass("invisible").addClass("visible");
   }
+}
 
 function formatDate(string) {
   let tourDates = moment();
@@ -138,6 +136,7 @@ function formatDate(string) {
   tourDates.date(string.substring(8, 10))
   tourDates.hour(string.substring(11, 13))
   tourDates.minute(string.substring(14, 16))
-}
+
   return tourDates.format('MMMM Do YYYY, h:mm a');
 }
+
