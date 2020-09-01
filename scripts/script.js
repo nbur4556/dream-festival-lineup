@@ -72,21 +72,21 @@ function bandModalInfo(artistInput) {
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/events/?app_id=9ebc2dc78f69f44da1e78195877b2314",
     method: "GET"
   }).then(appendEventsToModal);
-  $("#remove-button").on("click", function (){
-  removeArtist(artistInput)
-  }) 
+  $("#remove-button").on("click", function () {
+    removeArtist(artistInput)
+  })
 }
 function removeArtist(artistInput) {
   var headLiner = $("#headliner")
   var artist = $("#artist")
-    for (let i = 0; i < headLiner.length; i++) {
-      const element = array[index];
-      
-    }
-    for (let i = 0; i < artist.length; i++) {
-      const element = array[i];
-      
-    }
+  for (let i = 0; i < headLiner.length; i++) {
+    const element = array[index];
+
+  }
+  for (let i = 0; i < artist.length; i++) {
+    const element = array[i];
+
+  }
 }
 function appendArtistToModal(data) {
   const modalArtistSection = $("#artist-info");
@@ -128,7 +128,7 @@ function appendEventsToModal(data) {
     locationItem.append(cityState);
   }
   modalEventsSection.append(locationItem);
-<
+}
 
 function toggleBox() {
   let modal = $("#modal");
