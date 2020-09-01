@@ -19,7 +19,7 @@ function createLI() {
   liEl.text($("#user-input").val());
   liEl.on("click", function (event) {
     toggleBox();
-    bandModalInfo(event.target.textContent);
+    bandModalInfo(event.target.textContent, event.target);
   });
   return liEl;
 }
@@ -35,7 +35,6 @@ function getVideo() {
       maxResults: 1,
       type: 'video',
       videoEmbeddable: true,
-
     },
 
     success: function (data) {
@@ -45,9 +44,7 @@ function getVideo() {
     error: function (response) {
       console.log("Request Failed");
     }
-
   });
-
 }
 
 function embedVideo(data) {
@@ -60,7 +57,7 @@ function embedVideo(data) {
   $(".videoSection").append(videoTag);
 }
 
-function bandModalInfo(artistInput) {
+function bandModalInfo(artistInput, artistElement) {
   //Artist Info AJAX Call
   $.ajax({
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/?app_id=9ebc2dc78f69f44da1e78195877b2314",
@@ -72,21 +69,38 @@ function bandModalInfo(artistInput) {
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/events/?app_id=9ebc2dc78f69f44da1e78195877b2314",
     method: "GET"
   }).then(appendEventsToModal);
-  $("#remove-button").on("click", function (){
-  removeArtist(artistInput)
-  }) 
+
+  $("#remove-button").on("click", function () {
+    removeArtist(artistInput, artistElement);
+    //Resets the on click event
+    $("#remove-button").unbind('click');
+  });
 }
-function removeArtist(artistInput) {
-  var headLiner = $("#headliner")
-  var artist = $("#artist")
-    for (let i = 0; i < headLiner.length; i++) {
-      const element = array[index];
-      
+function removeArtist(artistInput, artistElement) {
+  // const headLiner = $("#headliner")
+  // const artist = $("#artist")
+  let artistContainer;
+
+  console.log(artistElement.parentElement);
+
+  if (artistElement.parentElement.id == "headliner") {
+    artistContainer = $("#headliner");
+  }
+  else {
+    artistContainer = $("#artist");
+  }
+
+  artistContainer.children().each(function (i, child) {
+    if (child.textContent == artistInput) {
+      child.parentElement.removeChild(child.parentElement.childNodes[i]);
     }
-    for (let i = 0; i < artist.length; i++) {
-      const element = array[i];
-      
-    }
+  });
+
+  // artist.children().each(function (i, child) {
+  //   if (child.textContent == artistInput) {
+  //     child.parentElement.removeChild(child.parentElement.childNodes[i]);
+  //   }
+  // });
 }
 function appendArtistToModal(data) {
   const modalArtistSection = $("#artist-info");
@@ -128,7 +142,7 @@ function appendEventsToModal(data) {
     locationItem.append(cityState);
   }
   modalEventsSection.append(locationItem);
-<
+}
 
 function toggleBox() {
   let modal = $("#modal");
