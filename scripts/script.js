@@ -9,7 +9,7 @@ $(document).ready(function () {
     LI.addClass("inline-block px-3");
     $("#artist").append(LI);
   });
-  // getVideo();
+  getVideo();
 
   $("#closeBtn").on("click", toggleBox);
 });
@@ -23,63 +23,42 @@ function createLI() {
   });
   return liEl;
 }
-// Youtube API
 
-// function getVideo() {
-//   $.ajax({
-//     type: 'GET',
-//     url: 'https://www.googleapis.com/youtube/v3/search',
-//     data: {
-//       key: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
-//       q: "cats",
-//       part: 'snippet',
-//       maxResults: 1,
-//       type: 'video',
-//       videoEmbeddable: true,
-//       id: 'videoId'
+function getVideo() {
+  $.ajax({
+    type: 'GET',
+    url: 'https://www.googleapis.com/youtube/v3/search',
+    data: {
+      key: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
+      q: 'cher',
+      part: 'snippet',
+      maxResults: 1,
+      type: 'video',
+      videoEmbeddable: true,
 
-//     },
-    
+    },
 
-//     success: function (data) {
-//       embedVideo(data)
-//       console.log(data)
-//     },
-//     error: function (response) {
-//       console.log("Request Failed");
-//     }
-
-//   });
-
-// }
-$(document).yTThumbnail({
-
-  // Specify the API key
-  apiKey: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
-
-  // Specify the video ID
-  videoID: 'ZQ_6Xo8cqxk',
-  callback: function(thumbnails) {
-    // Add the best quality image
-    // $('.video-thumbs').append('<p>Best Quality</p><img src=' + bestQuality.url + 'title="Best quality - Image size:' + bestQuality.width + 'x' + bestQuality.height + '>');
-    for (thumbnail in thumbnails) {
-      $('.video-thumbs').append('<img src="' + thumbnails[thumbnail].url + '" title="Image size:' + thumbnails[thumbnail].width + 'x' + thumbnails[thumbnail].height + '">');
+    success: function (data) {
+      embedVideo(data)
+      // console.log(data)
+    },
+    error: function (response) {
+      console.log("Request Failed");
     }
-  }
-  
-});
-// function linkVideo(data) {
-//   var videoLnk = $();
-// } 
-// function embedVideo(data) {
-//   var videoTag = $("<iframe>");
 
-//   videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId).thumbnail;
-//   $('h3').text(data.items[0].snippet.title);
-//   $('.description').text(data.items[0].snippet.description);
+  });
 
-//   $(".videoSection").append(videoTag);
-// }
+}
+
+function embedVideo(data) {
+  var videoTag = $("<iframe>");
+
+  videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
+  $('h3').text(data.items[0].snippet.title);
+  $('.description').text(data.items[0].snippet.description);
+
+  $(".videoSection").append(videoTag);
+}
 
 function bandModalInfo(artistInput) {
   //Artist Info AJAX Call
@@ -93,8 +72,22 @@ function bandModalInfo(artistInput) {
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/events/?app_id=9ebc2dc78f69f44da1e78195877b2314",
     method: "GET"
   }).then(appendEventsToModal);
+  $("#remove-button").on("click", function (){
+  removeArtist(artistInput)
+  }) 
 }
-
+function removeArtist(artistInput) {
+  var headLiner = $("#headliner")
+  var artist = $("#artist")
+    for (let i = 0; i < headLiner.length; i++) {
+      const element = array[index];
+      
+    }
+    for (let i = 0; i < artist.length; i++) {
+      const element = array[i];
+      
+    }
+}
 function appendArtistToModal(data) {
   const modalArtistSection = $("#artist-info");
   const nameItem = $('<h3>');
@@ -157,4 +150,3 @@ function formatDate(string) {
 
   return tourDates.format('MMMM Do YYYY, h:mm a');
 }
-
