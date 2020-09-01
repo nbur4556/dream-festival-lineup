@@ -128,7 +128,7 @@ function appendEventsToModal(data) {
     locationItem.append(cityState);
   }
   modalEventsSection.append(locationItem);
-}
+<
 
 function toggleBox() {
   let modal = $("#modal");
