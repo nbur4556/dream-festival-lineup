@@ -1,6 +1,9 @@
 body {
   background-color: black;
 }
+footer {
+  color: white;
+}
 .title {
     color: white;
     font-family: 'Monoton', cursive;
