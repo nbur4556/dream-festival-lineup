@@ -79,7 +79,7 @@ function bandModalInfo(artistInput) {
 function removeArtist(artistInput) {
 var headLiner = $("#headliner")
 var artist = $("#artist")
-for (let i = 0; index < array.length; index++) {
+for (let i = 0; i < headLiner.length; i++) {
   const element = array[index];
   
 }
