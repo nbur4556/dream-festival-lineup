@@ -37,9 +37,9 @@ function getVideo() {
       type: 'video',
       videoEmbeddable: true,
       id: 'videoId'
-      
 
     },
+    
 
     success: function (data) {
       embedVideo(data)
@@ -52,7 +52,9 @@ function getVideo() {
   });
 
 }
-
+function linkVideo(data) {
+  var videoLnk = $();
+} 
 function embedVideo(data) {
   var videoTag = $("<iframe>");
 
