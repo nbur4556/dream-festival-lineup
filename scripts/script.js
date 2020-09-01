@@ -30,11 +30,9 @@ function getVideo() {
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
-      key: 'AIzaSyBsc8RIKQMuscMBNLx6C3PWZTYDBrCH4xI',
+      key: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
       q: "cats",
       part: 'snippet',
-
-      
       maxResults: 1,
       type: 'video',
       videoEmbeddable: true,
