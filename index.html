@@ -5,14 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid City Limits</title>
-
-    <!-- Frameworks -->
+      <!-- Frameworks -->
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
 
-    <!-- Fonts -->
+      <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet" />
 
-    <!-- Stylesheets -->
+      <!-- Stylesheets -->
     <link href="./assets/stylesheets/mainstyle.css" rel="stylesheet" />
     <!--header font-->
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
@@ -25,7 +24,6 @@
       <div class="flex items-center">
         <img class="guitar-strings" src="https://img.icons8.com/color/48/000000/guitar-strings.png" alt="Guitar Head"/>
       </div>
-      <!-- AG note to change CCL so it's not a link -->
       <div class="title">
         COVID City Limits
       </div>
@@ -36,9 +34,15 @@
     <article class="grid grid-cols-12 gap-2 m-5">
       <!--Poster-->
       <section id="poster" class="grid grid-cols-12 col-span-8 row-span-5 gap-2 p-3">
+    
+        <!--test header and icon-->
+        <div class= "container" >
+          <img src="https://img.icons8.com/color/48/000000/guitar-strings.png"/>
+        <header>COVID City Limits</header>
+         </div>
+       
         <!-- Headliners -->
         <ul id="headliner" class="col-span-3 text-center"></ul>
-
         <!-- Artists -->
         <ul id="artist" class="col-span-9 text-center"></ul>
       </section>
@@ -47,11 +51,11 @@
       <section class="col-span-4">
         <input type="text" placeholder="Artist Name" class="w-full" id="user-input" />
         <div class="flex justify-end">
-          <button class="bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded m-2" id="headlinerBtn">
-            Add a Headliner
+          <button type="button" class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-black font-semibold px-4 py-2 rounded-sm" id="headlinerBtn">
+           Add a Headliner
           </button>
-          <button class="bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded m-2" id="artistBtn" >
-            Add an Artist
+          <button type="button" class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-black font-semibold px-4 py-2 rounded-sm" id="artistBtn">
+            Add a Artist
           </button>
         </div>
       </section>

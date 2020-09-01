@@ -1,6 +1,7 @@
 body {
   background-color: black;
 }
+
 footer {
   color: white;
 }
@@ -37,18 +38,22 @@ footer {
     font-family: "Francois One", sans-serif;
     opacity: 90%;
 }
-#headlinerBtn {
+#button {
   font-family: "Francois One", sans-serif;
-  color: white;
+  color: black;
 }
-#artistBtn {
+#button {
   font-family: "Francois One", sans-serif;
-  color: white;
+  color:black;
 }
 #closeBtn {
     float: right;
 }
 
+
+h3 {
+color:rgb(240, 201, 104)
+}
 .guitar-strings {
   width: 60px;
   height: 60px;
@@ -61,4 +66,3 @@ footer {
   color: white;
   margin-left: 20px;
 }
-
