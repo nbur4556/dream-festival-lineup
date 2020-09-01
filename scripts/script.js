@@ -70,6 +70,7 @@ function bandModalInfo(artistInput, artistElement) {
     method: "GET"
   }).then(appendEventsToModal);
 
+
   $("#remove-button").on("click", function () {
     removeArtist(artistInput, artistElement);
     //Resets the on click event

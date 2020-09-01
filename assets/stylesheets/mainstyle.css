@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: rgb(25, 22, 29);
 }
 
 footer {
@@ -51,9 +51,10 @@ footer {
 }
 
 
-h3 {
+.colored-header {
 color:rgb(240, 201, 104)
 }
+
 .guitar-strings {
   width: 60px;
   height: 60px;
