@@ -1,14 +1,14 @@
 $(document).ready(function () {
   $("#headlinerBtn").on("click", function () {
     let LI = createLI();
-    LI.addClass("text-3xl");
+    LI.addClass("text-5xl");
     $("#headliner").append(LI);
     setVideoArtist();
 
   });
   $("#artistBtn").on("click", function () {
     let LI = createLI();
-    LI.addClass("inline-block px-3");
+    LI.addClass("inline-block px-3 text-3xl");
     $("#artist").append(LI);
     setVideoArtist();
   });
