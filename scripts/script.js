@@ -3,9 +3,13 @@ $(document).ready(function () {
 
   $("#headlinerBtn").on("click", function () {
     let LI = createLI();
+
+    //need to get this function working properly
+    for(var i = 0; i < 6; i++){
     LI.addClass("text-5xl");
     $("#headliner").append(LI);
     setVideoArtist();
+  }
   });
   $("#artistBtn").on("click", function () {
     let LI = createLI();
@@ -67,6 +71,8 @@ function embedVideo(data) {
 }
 
 function bandModalInfo(artistInput, artistElement) {
+  let modal = $("#modal");
+  modal.show()
   //Artist Info AJAX Call
   $.ajax({
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/?app_id=9ebc2dc78f69f44da1e78195877b2314",
@@ -88,6 +94,7 @@ function bandModalInfo(artistInput, artistElement) {
 }
 function removeArtist(artistInput, artistElement) {
   let artistContainer;
+  let modal = $("#modal");
 
   if (artistElement.parentElement.id == "headliner") {
     artistContainer = $("#headliner");
@@ -99,7 +106,9 @@ function removeArtist(artistInput, artistElement) {
   artistContainer.children().each(function (i, child) {
     if (child.textContent == artistInput) {
       child.parentElement.removeChild(child.parentElement.childNodes[i]);
-    }
+    } 
+    //get the modal to close when the artist is removed
+   modal.hide();
   });
 }
 function appendArtistToModal(data) {
