@@ -22,10 +22,11 @@
   <body>
 
     <div class="flex grid grid-cols-2 gap-2 m-3" id="intro">
-      <p class="col-span-1">COVID ruined your festival plans for 2020? Have no fear! Design your dream festival line-up and keep the festival
+      <p class="lg:col-span-1 sm:col-span-2">COVID ruined your festival plans for 2020? Have no fear! Design your dream festival line-up and keep the festival
       energy alive!
       </p>
-      <section class="col-span-1">
+      <!-- User Input -->
+      <section class="lg:col-span-1 sm:col-span-2">
         <input type="text" placeholder="Artist Name" class="w-full p-1 rounded-sm" id="user-input" />
         <div class="flex justify-end p-1">
           <button type="button"
@@ -48,7 +49,7 @@
 
 
       <!--Poster-->
-      <section id="poster" class="lg:col-span-8 sm:col-span-12 bg-auto">
+      <section id="poster" class="lg:col-span-8 sm:col-span-12 col-span-12 bg-auto">
 
         <!--test header and icon-->
         <div>
@@ -58,7 +59,7 @@
               <img class="guitar-strings" src="https://img.icons8.com/color/48/000000/guitar-strings.png"
                 alt="Guitar Head" />
             </div>
-            <div class="title">
+            <div class="title sm:text-4xl md:text-6xl lg:text-6xl">
               COVID City Limits
             </div>
           </header>
@@ -71,7 +72,7 @@
         </section>
       </section>
 
-      <!-- User Input -->
+      
       
 
       <section class="videoSection grid col-span-3 video-thumbs">
