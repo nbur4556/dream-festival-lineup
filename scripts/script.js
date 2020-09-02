@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  var videoArtist = "cher"
+
   $("#headlinerBtn").on("click", function () {
     let LI = createLI();
 
@@ -8,7 +10,6 @@ $(document).ready(function () {
     $("#headliner").append(LI);
     setVideoArtist();
   }
-
   });
   $("#artistBtn").on("click", function () {
     let LI = createLI();
@@ -16,13 +17,12 @@ $(document).ready(function () {
     $("#artist").append(LI);
     setVideoArtist();
   });
-  var videoArtist = "cher"
   $("#videoBtn").on("click", function () {
     getVideo(videoArtist);
   });
 
-  function setVideoArtist(){
-    videoArtist= $("#user-input").val();
+  function setVideoArtist() {
+    videoArtist = $("#user-input").val();
   }
 
   $("#closeBtn").on("click", toggleBox);
@@ -64,6 +64,7 @@ function getVideo(videoArtist) {
 function embedVideo(data) {
   var videoTag = $("<iframe>");
 
+  videoTag.addClass('w-10/12 lg:w-3/4 sm:w-10/12 m-3 h-64');
   videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
   $('h3').text(data.items[0].snippet.title);
   $(".videoSection").append(videoTag);
@@ -92,12 +93,8 @@ function bandModalInfo(artistInput, artistElement) {
   });
 }
 function removeArtist(artistInput, artistElement) {
-  // const headLiner = $("#headliner")
-  // const artist = $("#artist")
   let artistContainer;
   let modal = $("#modal");
-
-  console.log(artistElement.parentElement);
 
   if (artistElement.parentElement.id == "headliner") {
     artistContainer = $("#headliner");
@@ -113,12 +110,6 @@ function removeArtist(artistInput, artistElement) {
     //get the modal to close when the artist is removed
    modal.hide();
   });
-
-  // artist.children().each(function (i, child) {
-  //   if (child.textContent == artistInput) {
-  //     child.parentElement.removeChild(child.parentElement.childNodes[i]);
-  //   }
-  // });
 }
 function appendArtistToModal(data) {
   const modalArtistSection = $("#artist-info");
