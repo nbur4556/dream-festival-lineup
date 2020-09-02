@@ -39,7 +39,7 @@ function getVideo(videoArtist) {
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
-      key: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
+      key: 'AIzaSyAq5Pvjkyqvha8J35OkLu5ec5Cdj2zKYjs',
       q: videoArtist,
       part: 'snippet',
       maxResults: 1,
@@ -60,7 +60,7 @@ function getVideo(videoArtist) {
 function embedVideo(data) {
   var videoTag = $("<iframe>");
 
-  videoTag.addClass('m-2');
+  videoTag.addClass('w-10/12 lg:w-3/4 sm:w-10/12 m-3 h-64');
   videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
   $('h3').text(data.items[0].snippet.title);
   $(".videoSection").append(videoTag);
