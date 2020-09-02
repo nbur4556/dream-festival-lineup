@@ -39,7 +39,7 @@ function getVideo(videoArtist) {
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
-      key: 'AIzaSyAq5Pvjkyqvha8J35OkLu5ec5Cdj2zKYjs',
+      key: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
       q: videoArtist,
       part: 'snippet',
       maxResults: 1,
@@ -60,6 +60,7 @@ function getVideo(videoArtist) {
 function embedVideo(data) {
   var videoTag = $("<iframe>");
 
+  videoTag.addClass('m-2');
   videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
   $('h3').text(data.items[0].snippet.title);
   $(".videoSection").append(videoTag);
@@ -86,11 +87,7 @@ function bandModalInfo(artistInput, artistElement) {
   });
 }
 function removeArtist(artistInput, artistElement) {
-  // const headLiner = $("#headliner")
-  // const artist = $("#artist")
   let artistContainer;
-
-  console.log(artistElement.parentElement);
 
   if (artistElement.parentElement.id == "headliner") {
     artistContainer = $("#headliner");

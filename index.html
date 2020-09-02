@@ -10,11 +10,10 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
     <link href="./assets/stylesheets/mainstyle.css" rel="stylesheet" />
-    <!--header font-->
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
   </head>
 
   <!--Start of body-->
@@ -22,12 +21,15 @@
   <body>
 
     <div class="flex grid grid-cols-2 gap-2 m-3" id="intro">
+      <!-- Header Tag -->
       <p class="col-span-2 lg:col-span-1 sm:col-span-2">COVID ruined your festival plans for 2020? Have no fear! Design
         your dream festival line-up and keep the festival energy alive!
       </p>
+
       <!-- User Input -->
       <section class="col-span-2 lg:col-span-1 sm:col-span-2">
         <input type="text" placeholder="Artist Name" class="w-full p-1 rounded-sm" id="user-input" />
+        <!-- Buttons -->
         <div class="flex justify-around lg:justify-end sm:justify-around p-1">
           <button type="button" class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 
             text-black px-2 py-1 lg:px-4 lg:py-2 sm:px-2 sm:py-1 rounded-sm m-2" id="headlinerBtn">
@@ -43,26 +45,27 @@
           </button>
         </div>
       </section>
+
     </div>
+
     <article class="grid grid-cols-12 gap-2 m-5">
 
 
       <!--Poster-->
       <section id="poster" class="col-span-12 lg:col-span-8 sm:col-span-12 bg-auto">
 
-        <!--test header and icon-->
-        <div>
-          <header class="flex">
-            <!--guitar string icon-->
-            <div class="flex items-center">
-              <img class="guitar-strings" src="https://img.icons8.com/color/48/000000/guitar-strings.png"
-                alt="Guitar Head" />
-            </div>
-            <div class="title text-4xl sm:text-4xl md:text-6xl lg:text-6xl">
-              COVID City Limits
-            </div>
-          </header>
-        </div>
+        <!--Poster Header-->
+        <header class="flex">
+          <!--guitar string icon-->
+          <div class="flex items-center">
+            <img class="guitar-strings" src="https://img.icons8.com/color/48/000000/guitar-strings.png"
+              alt="Guitar Head" />
+          </div>
+          <div class="title text-4xl sm:text-4xl md:text-6xl lg:text-6xl">
+            COVID City Limits
+          </div>
+        </header>
+
         <section class="grid grid-cols-12 gap-2 p-3">
           <!-- Headliners -->
           <ul id="headliner" class="col-span-3 text-center"></ul>
@@ -71,12 +74,10 @@
         </section>
       </section>
 
-
-
-
-      <section class="videoSection grid col-span-3 video-thumbs">
-        <h3 class="colored-header">Video Title</h3>
-
+      <!-- Video Section -->
+      <section
+        class="videoSection flex flex-col justify-start items-center col-span-12 lg:col-span-4 sm:col-span-12 video-thumbs">
+        <h3 class="colored-header text-3xl">Playlist</h3>
         <!-- <p class="description">Video Description<p> -->
       </section>
     </article>
