@@ -20,10 +20,12 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    overflow: hidden;
   
     /* Poster image size is 765x976 px */
     width: 100%;
-    height: 976px;
+    height: 1976px;
     
     color: white;
 }

@@ -1,10 +1,11 @@
 $(document).ready(function () {
+  var videoArtist = "cher"
+
   $("#headlinerBtn").on("click", function () {
     let LI = createLI();
     LI.addClass("text-5xl");
     $("#headliner").append(LI);
     setVideoArtist();
-
   });
   $("#artistBtn").on("click", function () {
     let LI = createLI();
@@ -12,7 +13,6 @@ $(document).ready(function () {
     $("#artist").append(LI);
     setVideoArtist();
   });
-  var videoArtist = "cher"
   $("#videoBtn").on("click", function () {
     getVideo(videoArtist);
   });
