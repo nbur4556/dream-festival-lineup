@@ -3,17 +3,23 @@ $(document).ready(function () {
     let LI = createLI();
     LI.addClass("text-3xl");
     $("#headliner").append(LI);
+    setVideoArtist();
+
   });
   $("#artistBtn").on("click", function () {
     let LI = createLI();
     LI.addClass("inline-block px-3");
     $("#artist").append(LI);
+    setVideoArtist();
   });
+  var videoArtist = "cher"
   $("#videoBtn").on("click", function () {
-    // let LI = createLI();
-    // LI.addClass("inline-block px-3");
+    getVideo(videoArtist);
+  });
 
-  // getVideo();
+  function setVideoArtist(){
+    videoArtist= $("#user-input").val();
+  }
 
   $("#closeBtn").on("click", toggleBox);
 });
@@ -28,13 +34,13 @@ function createLI() {
   return liEl;
 }
 
-function getVideo() {
+function getVideo(videoArtist) {
   $.ajax({
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
       key: 'AIzaSyAq5Pvjkyqvha8J35OkLu5ec5Cdj2zKYjs',
-      q: 'cher',
+      q: videoArtist,
       part: 'snippet',
       maxResults: 1,
       type: 'video',
@@ -59,8 +65,6 @@ function embedVideo(data) {
 
   videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
   $('h3').text(data.items[0].snippet.title);
-  $('.description').text(data.items[0].snippet.description);
-
   $(".videoSection").append(videoTag);
 }
 
@@ -132,7 +136,7 @@ function appendEventsToModal(data) {
     locationItem.append(cityState);
   }
   modalEventsSection.append(locationItem);
-
+}
 
 function toggleBox() {
   let modal = $("#modal");
