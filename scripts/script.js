@@ -3,11 +3,11 @@ $(document).ready(function () {
     let LI = createLI();
 
     //need to get this function working properly
-    for(var i = 0; i < $("#headliner").childNodes.length; i++)
-    if ( LI > 7) {
-      $("#headliner").append(LI); 
-    LI.addClass("text-5xl");}
+    for(var i = 0; i < 6; i++){
+    LI.addClass("text-5xl");
+    $("#headliner").append(LI);
     setVideoArtist();
+  }
 
   });
   $("#artistBtn").on("click", function () {
