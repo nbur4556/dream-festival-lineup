@@ -21,13 +21,31 @@
 
   <body>
 
-    <div class="grid grid-cols-2 gap-2 m-3" id="intro">
-      COVID ruined your festival plans for 2020? Have no fear! Design your dream festival line-up and keep the festival
+    <div class="flex grid grid-cols-2 gap-2 m-3" id="intro">
+      <p class="col-span-1">COVID ruined your festival plans for 2020? Have no fear! Design your dream festival line-up and keep the festival
       energy alive!
+      </p>
+      <section class="col-span-1">
+        <input type="text" placeholder="Artist Name" class="w-full" id="user-input" />
+        <div class="flex justify-end">
+          <button type="button"
+            class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-black font-semibold px-4 py-2 rounded-sm"
+            id="headlinerBtn">
+            Add a Headliner
+          </button>
+          <button type="button"
+            class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-black font-semibold px-4 py-2 rounded-sm"
+            id="artistBtn">
+            Add a Artist
+          </button>
+        </div>
+      </section>
     </div>
     <article class="grid grid-cols-12 gap-2 m-5">
+
+
       <!--Poster-->
-      <section id="poster" class="col-span-8">
+      <section id="poster" class="col-span-8 bg-auto">
 
         <!--test header and icon-->
         <div>
@@ -51,21 +69,7 @@
       </section>
 
       <!-- User Input -->
-      <section class="col-span-4">
-        <input type="text" placeholder="Artist Name" class="w-full" id="user-input" />
-        <div class="flex justify-end">
-          <button type="button"
-            class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-black font-semibold px-4 py-2 rounded-sm"
-            id="headlinerBtn">
-            Add a Headliner
-          </button>
-          <button type="button"
-            class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-black font-semibold px-4 py-2 rounded-sm"
-            id="artistBtn">
-            Add a Artist
-          </button>
-        </div>
-      </section>
+      
 
       <section class="videoSection grid col-span-3 video-thumbs">
         <h3 class="colored-header">Video Title</h3>
@@ -90,9 +94,16 @@
     </article>
 
     <!-- Footer -->
+    <div class="table w-full">
+      <div class="table-row-group">
+        <div class="table-row">
+          <div class="table-cell bg-"
+        </div>
+      </div>
+    </div>
     <footer class="p-10 bg-black-400 flex justify-between border-t">
       <div class="md:w-1/2">
-        <h3 class="colored-header text-lg-mb-2">placeholder ABOUT HAAM BANDSINTOWN</h3>
+        <h3 class="colored-header text-lg-mb-2">COVID City Limits</h3>
       </div>
 
       <div>

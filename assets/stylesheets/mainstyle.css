@@ -4,6 +4,8 @@ body {
 
 footer {
   color: white;
+  font-family: 'Monoton', cursive;
+  font-size: 32px;
 }
 .title {
     color: white;

@@ -9,7 +9,7 @@ $(document).ready(function () {
     LI.addClass("inline-block px-3");
     $("#artist").append(LI);
   });
-  getVideo();
+  // getVideo();
 
   $("#closeBtn").on("click", toggleBox);
 });
