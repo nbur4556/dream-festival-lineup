@@ -66,6 +66,8 @@ function embedVideo(data) {
 }
 
 function bandModalInfo(artistInput, artistElement) {
+  let modal = $("#modal");
+  modal.show()
   //Artist Info AJAX Call
   $.ajax({
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/?app_id=9ebc2dc78f69f44da1e78195877b2314",
@@ -89,7 +91,7 @@ function removeArtist(artistInput, artistElement) {
   // const headLiner = $("#headliner")
   // const artist = $("#artist")
   let artistContainer;
-  //let modal = $("#modal");
+  let modal = $("#modal");
 
   console.log(artistElement.parentElement);
 
@@ -105,7 +107,7 @@ function removeArtist(artistInput, artistElement) {
       child.parentElement.removeChild(child.parentElement.childNodes[i]);
     } 
     //get the modal to close when the artist is removed
-    //modal.removeClass("invisible").addClass("visible");
+   modal.hide();
   });
 
   // artist.children().each(function (i, child) {
