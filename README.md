@@ -27,7 +27,7 @@
         * Calendar Creation
     * Ashli Hanson
         * Music API Research
-    * Roger Laura
+    * Roger Lara
         * Location and Calendar Research
     * Bradley Guidry
         * Design
