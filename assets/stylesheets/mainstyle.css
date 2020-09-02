@@ -24,9 +24,14 @@ footer {
     /* Poster image size is 765x976 px */
     width: 100%;
     height: 976px;
-  
-    font-family: "Francois One", sans-serif;
+    
     color: white;
+}
+#headliner{
+  font-family: 'Lilita One', cursive;
+}
+#artist{
+  font-family: "Francois One", sans-serif;
 }
 #modal-overlay{
     width: 100vw;
