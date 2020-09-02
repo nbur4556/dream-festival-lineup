@@ -17,8 +17,8 @@ $(document).ready(function () {
     getVideo(videoArtist);
   });
 
-  function setVideoArtist(){
-    videoArtist= $("#user-input").val();
+  function setVideoArtist() {
+    videoArtist = $("#user-input").val();
   }
 
   $("#closeBtn").on("click", toggleBox);
@@ -104,12 +104,6 @@ function removeArtist(artistInput, artistElement) {
       child.parentElement.removeChild(child.parentElement.childNodes[i]);
     }
   });
-
-  // artist.children().each(function (i, child) {
-  //   if (child.textContent == artistInput) {
-  //     child.parentElement.removeChild(child.parentElement.childNodes[i]);
-  //   }
-  // });
 }
 function appendArtistToModal(data) {
   const modalArtistSection = $("#artist-info");
