@@ -1,8 +1,12 @@
 $(document).ready(function () {
   $("#headlinerBtn").on("click", function () {
     let LI = createLI();
-    LI.addClass("text-5xl");
-    $("#headliner").append(LI);
+
+    //need to get this function working properly
+    for(var i = 0; i < $("#headliner").childNodes.length; i++)
+    if ( LI > 7) {
+      $("#headliner").append(LI); 
+    LI.addClass("text-5xl");}
     setVideoArtist();
 
   });
