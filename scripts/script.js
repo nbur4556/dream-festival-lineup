@@ -5,11 +5,11 @@ $(document).ready(function () {
     let LI = createLI();
 
     //need to get this function working properly
-    for(var i = 0; i < 6; i++){
-    LI.addClass("text-5xl");
-    $("#headliner").append(LI);
-    setVideoArtist();
-  }
+    for (var i = 0; i < 6; i++) {
+      LI.addClass("text-5xl");
+      $("#headliner").append(LI);
+      setVideoArtist();
+    }
   });
   $("#artistBtn").on("click", function () {
     let LI = createLI();
@@ -43,7 +43,7 @@ function getVideo(videoArtist) {
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
-      key: 'AIzaSyAq5Pvjkyqvha8J35OkLu5ec5Cdj2zKYjs',
+      key: 'AIzaSyDT-_iX7-6LMtQ6Lnv08ZFdEPCWbMSfejw',
       q: videoArtist,
       part: 'snippet',
       maxResults: 1,
@@ -57,6 +57,7 @@ function getVideo(videoArtist) {
     },
     error: function (response) {
       console.log("Request Failed");
+      console.log(response);
     }
   });
 }
@@ -66,7 +67,7 @@ function embedVideo(data) {
 
   videoTag.addClass('w-10/12 lg:w-3/4 sm:w-10/12 m-3 h-64');
   videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
-  $('h3').text(data.items[0].snippet.title);
+  $('#video-title').text(data.items[0].snippet.title);
   $(".videoSection").append(videoTag);
 }
 
@@ -106,9 +107,9 @@ function removeArtist(artistInput, artistElement) {
   artistContainer.children().each(function (i, child) {
     if (child.textContent == artistInput) {
       child.parentElement.removeChild(child.parentElement.childNodes[i]);
-    } 
+    }
     //get the modal to close when the artist is removed
-   modal.hide();
+    modal.hide();
   });
 }
 function appendArtistToModal(data) {

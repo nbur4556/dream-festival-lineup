@@ -31,9 +31,11 @@ footer {
 }
 #headliner{
   font-family: 'Lilita One', cursive;
+  overflow-wrap: break-word;
 }
 #artist{
   font-family: "Francois One", sans-serif;
+  overflow-wrap: break-word;
 }
 #modal-overlay{
     width: 100vw;
