@@ -1,9 +1,13 @@
 $(document).ready(function () {
   $("#headlinerBtn").on("click", function () {
     let LI = createLI();
+
+    //need to get this function working properly
+    for(var i = 0; i < 6; i++){
     LI.addClass("text-5xl");
     $("#headliner").append(LI);
     setVideoArtist();
+  }
 
   });
   $("#artistBtn").on("click", function () {
