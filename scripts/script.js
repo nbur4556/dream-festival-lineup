@@ -89,6 +89,7 @@ function removeArtist(artistInput, artistElement) {
   // const headLiner = $("#headliner")
   // const artist = $("#artist")
   let artistContainer;
+  //let modal = $("#modal");
 
   console.log(artistElement.parentElement);
 
@@ -102,7 +103,9 @@ function removeArtist(artistInput, artistElement) {
   artistContainer.children().each(function (i, child) {
     if (child.textContent == artistInput) {
       child.parentElement.removeChild(child.parentElement.childNodes[i]);
-    }
+    } 
+    //get the modal to close when the artist is removed
+    //modal.removeClass("invisible").addClass("visible");
   });
 
   // artist.children().each(function (i, child) {
