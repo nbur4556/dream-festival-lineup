@@ -4,11 +4,12 @@ body {
 
 footer {
   color: white;
+  font-family: 'Monoton', cursive;
+  font-size: 32px;
 }
 .title {
     color: white;
     font-family: 'Monoton', cursive;
-    font-size: 55px;
 }
 .videoSection {
   font-family: "Francois One", sans-serif;
@@ -21,7 +22,7 @@ footer {
     background-position: center;
   
     /* Poster image size is 765x976 px */
-    width: 765px;
+    width: 100%;
     height: 976px;
   
     font-family: "Francois One", sans-serif;
@@ -66,4 +67,8 @@ color:rgb(240, 201, 104)
   font-family: "Francois One", sans-serif;
   color: white;
   margin-left: 20px;
+}
+
+#user-input {
+  color : black;
 }

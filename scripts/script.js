@@ -9,7 +9,12 @@ $(document).ready(function () {
     LI.addClass("inline-block px-3");
     $("#artist").append(LI);
   });
-  getVideo();
+  $("#videoBtn").on("click", function () {
+    // let LI = createLI();
+    // LI.addClass("inline-block px-3");
+
+  // getVideo();
+  });
 
   $("#closeBtn").on("click", toggleBox);
 });
@@ -29,7 +34,7 @@ function getVideo() {
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
-      key: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
+      key: 'AIzaSyAq5Pvjkyqvha8J35OkLu5ec5Cdj2zKYjs',
       q: 'cher',
       part: 'snippet',
       maxResults: 1,
