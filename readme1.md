@@ -1,4 +1,4 @@
-# Team ________ Group Project 
+# First Group Project 
 <img width="1680" alt="Screen Shot 2020-09-02 at 8 24 48 PM" src="https://user-images.githubusercontent.com/60681276/92065806-f1a7b080-ed65-11ea-91d3-dc86be7c425a.png">
 
 # Covid City Limits Music
