@@ -8,9 +8,9 @@
 Due to the Coronavirus pandemic that changed the world as we knew it. Losing Austin's live music scene is a tremendous loss to the city that is known as "The Live Music Capital of the World". Our project is created to bring a little of that lost live music festival feel, if only for a moment, back into your life. So grab your group, make your Flag and hoist it up high, pick your Headliners and Artist and watch your performance.
 
 # Usage Instructions
-* Enter your performer in the Artist Name link
-* Select Add a Headliner or Artist, when one is selected a modal will open and if there is a live  concert scheduled for the near future, the venue information will show up in a modal. In the bottom of the modal a "remove artist" link is added in case you want to delete the selection.
-* When Start My Festival is selected.....?? 
+* Enter your performer in the Artist Name input box
+* Select Add a Headliner or Artist, when one is selected a modal will open and if there is a live  concert scheduled for the near future, the venue information will show up in a modal. In the bottom of the modal a "remove artist" button is added in case you want to delete the selection.
+* When Start My Festival is selected the music video populates
 
 # Future Development 
 
@@ -23,7 +23,7 @@ Due to the Coronavirus pandemic that changed the world as we knew it. Losing Aus
 * Cloudflare 
 * googleapis.com 
 
-# API"s Reference 
+# API's Reference 
 * YouTube
 * BandsinTown
 
