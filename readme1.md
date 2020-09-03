@@ -4,7 +4,7 @@
 # Covid City Limits Music
 
 # Motivation 
-Due to the Coronavirus pandemic that changed the world as we knew it. Losing Austin's live music scene is a tremendous loss to the city that is known as "The Live Music Capital of the World". Our project is created to bring a little of that lost live music festival feel, if only for a moment, back into your life. So sit back, grab the beverage of your choice, pick your Headliners and Artist and watch your performance.
+Due to the Coronavirus pandemic that changed the world as we knew it. Losing Austin's live music scene is a tremendous loss to the city that is known as "The Live Music Capital of the World". Our project is created to bring a little of that lost live music festival feel, if only for a moment, back into your life. So grab your group, make your Flag and hoist it up high, pick your Headliners and Artist and watch your performance.
 
 # Usage Instructions
 * Enter your performer in the Artist Name link
