@@ -12,8 +12,6 @@ Due to the Coronavirus pandemic that changed the world as we knew it. Losing Aus
 * Select Add a Headliner or Artist, when one is selected a modal will open and if there is a live  concert scheduled for the near future, the venue information will show up in a modal. In the bottom of the modal a "remove artist" button is added in case you want to delete the selection.
 * When Start My Festival is selected the music video populates
 
-# Future Development 
-
 # Technologies Used
 * HTML
 * css
