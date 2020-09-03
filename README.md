@@ -14,8 +14,6 @@ Due to the Coronavirus pandemic that changed the world as we knew it. Losing Aus
 
 # Future Development 
 
-# Methodology
-
 # Technologies Used
 * HTML
 * css
@@ -24,7 +22,6 @@ Due to the Coronavirus pandemic that changed the world as we knew it. Losing Aus
 * ICON8 
 * Cloudflare 
 * googleapis.com 
-
 
 # API"s Reference 
 * YouTube
@@ -37,7 +34,6 @@ Due to the Coronavirus pandemic that changed the world as we knew it. Losing Aus
 * Ashli Hanson       
 * Roger Lara       
     
-
 # Credits
 Mauricio Prieto BandsinTown Group Montreal
 * Thank you for the use of your API key
