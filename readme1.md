@@ -39,6 +39,8 @@ Due to the Coronavirus pandemic that changed the world as we knew it. Losing Aus
     
 
 # Credits
+Mauricio Prieto BandsinTown Group Montreal
+Thank you for the use of your API key
 
 
 
