@@ -28,8 +28,6 @@ Due to the Coronavirus pandemic that changed the world as we knew it. Loosing Au
 # API"s Reference 
 * YouTube
 * BandsinTown
-!! may omit this part!!
-* Some of the Services (e.g., the Bandsintown App, etc.) may be dependent on and/or interoperate with third-party owned and/or operated platforms and services (e.g., Apple (iTunes, etc.), Facebook, Twitter, Last.fm, Pandora, etc.) (each, a “Third Party Platform”) and may require that you be a registered member of such Third Party Platforms and provide certain account credentials and other information in order to access such Services. 
 
 # Project Designers
  * Nick Burt
