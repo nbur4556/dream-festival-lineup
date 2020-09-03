@@ -1,6 +1,6 @@
 # First Group Project 
 # Covid City Limits Music
-![Screen Shot 2020-09-03 at 12 28 50 PM (2)](https://user-images.githubusercontent.com/60681276/92148533-543e9200-ede2-11ea-8db4-5f6870fdbae9.png)
+![screenshot-127 0 0 1_5502-2020 09 03-17_41_41](https://user-images.githubusercontent.com/60681276/92180682-3cc8ce80-ee0d-11ea-9d8e-5c46090059cd.png)
 
 # Link
 https://nbur4556.github.io/dream-festival-lineup/
