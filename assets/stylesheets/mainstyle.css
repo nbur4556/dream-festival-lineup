@@ -1,11 +1,9 @@
 body {
   background-color: rgb(25, 22, 29);
 }
-
 footer {
-  color: white;
   font-family: 'Monoton', cursive;
-  font-size: 32px;
+  font-size: 20px;
 }
 .title {
     color: white;
