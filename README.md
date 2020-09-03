@@ -3,6 +3,7 @@
 ![Screen Shot 2020-09-03 at 12 28 50 PM (2)](https://user-images.githubusercontent.com/60681276/92148533-543e9200-ede2-11ea-8db4-5f6870fdbae9.png)
 
 # Link
+https://nbur4556.github.io/dream-festival-lineup/
 
 # Motivation 
 Due to the Coronavirus pandemic that changed the world as we knew it. Losing Austin's live music scene is a tremendous loss to the city that is known as "The Live Music Capital of the World". Our project is created to bring a little of that lost live music festival feel, if only for a moment, back into your life. So grab your group, make your Flag and hoist it up high, pick your Headliners and Artist and watch your performance.
