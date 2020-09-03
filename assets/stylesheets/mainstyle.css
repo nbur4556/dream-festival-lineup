@@ -8,7 +8,6 @@ footer {
 .title {
     color: white;
     font-family: 'Monoton', cursive;
-    font-size: 55px;
 }
 .videoSection {
   font-family: "Francois One", sans-serif;
@@ -19,13 +18,22 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    overflow: hidden;
   
     /* Poster image size is 765x976 px */
-    width: 765px;
-    height: 976px;
-  
-    font-family: "Francois One", sans-serif;
+    width: 100%;
+    height: 1976px;
+    
     color: white;
+}
+#headliner{
+  font-family: 'Lilita One', cursive;
+  overflow-wrap: break-word;
+}
+#artist{
+  font-family: "Francois One", sans-serif;
+  overflow-wrap: break-word;
 }
 #modal-overlay{
     width: 100vw;
@@ -66,4 +74,8 @@ color:rgb(240, 201, 104)
   font-family: "Francois One", sans-serif;
   color: white;
   margin-left: 20px;
+}
+
+#user-input {
+  color : black;
 }

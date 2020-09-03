@@ -1,15 +1,29 @@
 $(document).ready(function () {
+  var videoArtist = "cher"
+
   $("#headlinerBtn").on("click", function () {
     let LI = createLI();
-    LI.addClass("text-3xl");
-    $("#headliner").append(LI);
+
+    //need to get this function working properly
+    for (var i = 0; i < 6; i++) {
+      LI.addClass("text-5xl");
+      $("#headliner").append(LI);
+      setVideoArtist();
+    }
   });
   $("#artistBtn").on("click", function () {
     let LI = createLI();
-    LI.addClass("inline-block px-3");
+    LI.addClass("inline-block px-3 text-3xl");
     $("#artist").append(LI);
+    setVideoArtist();
   });
-  getVideo();
+  $("#videoBtn").on("click", function () {
+    getVideo(videoArtist);
+  });
+
+  function setVideoArtist() {
+    videoArtist = $("#user-input").val();
+  }
 
   $("#closeBtn").on("click", toggleBox);
 });
@@ -24,13 +38,13 @@ function createLI() {
   return liEl;
 }
 
-function getVideo() {
+function getVideo(videoArtist) {
   $.ajax({
     type: 'GET',
     url: 'https://www.googleapis.com/youtube/v3/search',
     data: {
-      key: 'AIzaSyA7ilPgtslsSUjFGtpcmmJBV8lRCzWjF-s',
-      q: 'cher',
+      key: 'AIzaSyDT-_iX7-6LMtQ6Lnv08ZFdEPCWbMSfejw',
+      q: videoArtist,
       part: 'snippet',
       maxResults: 1,
       type: 'video',
@@ -43,6 +57,7 @@ function getVideo() {
     },
     error: function (response) {
       console.log("Request Failed");
+      console.log(response);
     }
   });
 }
@@ -50,14 +65,15 @@ function getVideo() {
 function embedVideo(data) {
   var videoTag = $("<iframe>");
 
+  videoTag.addClass('w-10/12 lg:w-3/4 sm:w-10/12 m-3 h-64');
   videoTag.attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
-  $('h3').text(data.items[0].snippet.title);
-  $('.description').text(data.items[0].snippet.description);
-
+  $('#video-title').text(data.items[0].snippet.title);
   $(".videoSection").append(videoTag);
 }
 
 function bandModalInfo(artistInput, artistElement) {
+  let modal = $("#modal");
+  modal.show()
   //Artist Info AJAX Call
   $.ajax({
     url: "https://rest.bandsintown.com/artists/" + artistInput + "/?app_id=9ebc2dc78f69f44da1e78195877b2314",
@@ -78,11 +94,8 @@ function bandModalInfo(artistInput, artistElement) {
   });
 }
 function removeArtist(artistInput, artistElement) {
-  // const headLiner = $("#headliner")
-  // const artist = $("#artist")
   let artistContainer;
-
-  console.log(artistElement.parentElement);
+  let modal = $("#modal");
 
   if (artistElement.parentElement.id == "headliner") {
     artistContainer = $("#headliner");
@@ -95,13 +108,9 @@ function removeArtist(artistInput, artistElement) {
     if (child.textContent == artistInput) {
       child.parentElement.removeChild(child.parentElement.childNodes[i]);
     }
+    //get the modal to close when the artist is removed
+    modal.hide();
   });
-
-  // artist.children().each(function (i, child) {
-  //   if (child.textContent == artistInput) {
-  //     child.parentElement.removeChild(child.parentElement.childNodes[i]);
-  //   }
-  // });
 }
 function appendArtistToModal(data) {
   const modalArtistSection = $("#artist-info");
