@@ -10,8 +10,9 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
 
     <!-- Stylesheets -->
     <link href="./assets/stylesheets/mainstyle.css" rel="stylesheet" />
@@ -21,16 +22,16 @@
 
   <body>
 
-    <div class="flex grid grid-cols-2 gap-2 m-3" id="intro">
+    <div class="flex grid grid-cols-2 gap-2 m-3 " id="intro">
       <!-- Header Tag -->
       <p
         class="col-span-2 lg:col-span-1 sm:col-span-2 text-1xl lg:text-2xl sm:text-1xl text-center lg:text-justify sm:text-center px-3">
-        COVID ruined your festival plans for 2020? Have no fear! Design your dream festival line-up and keep the
-        festival energy alive!
+        Create your dream festival line up poster and playlist to enjoy anytime and anywhere. Simply type in your favorite musicians or bands and designate them as a headliner or artist. 
+        Once it's complete, start your playlist and let the good times roll. 
       </p>
 
       <!-- User Input -->
-      <section class="col-span-2 lg:col-span-1 sm:col-span-2">
+      <section class="col-span-2 lg:col-span-1 sm:col-span-2" id="userBox">
         <input type="text" placeholder="Artist Name" class="w-full p-1 rounded-sm" id="user-input" />
         <!-- Buttons -->
         <div class="flex justify-around lg:justify-end sm:justify-around p-1">
@@ -59,7 +60,6 @@
 
         <!--Poster Header-->
         <header class="flex">
-          <!--guitar string icon-->
           <div class="title text-4xl sm:text-4xl md:text-6xl lg:text-6xl px-4">
             COVID City Limits
           </div>
@@ -75,8 +75,9 @@
 
       <!-- Video Section -->
       <section
-        class="videoSection flex flex-col justify-start items-center col-span-12 lg:col-span-4 sm:col-span-12 video-thumbs">
-        <h3 id="video-title" class="colored-header text-3xl">Video Playlist</h3>
+        class="videoSection flex flex-col justify-start items-center col-span-12 lg:col-span-4 sm:col-span-12 video-thumbs" id="videoBox">
+        <h3 id="video-title" class="colored-header text-3xl">Playlist</h3>
+        <img src="assets/images/playlist-placeholder.png" alt="Spotify Example">
         <!-- <p class="description">Video Description<p> -->
       </section>
     </article>
@@ -101,14 +102,13 @@
     </article>
 
     <!-- Footer -->
-    <footer class="grid grid-flow-col p-8 border-t">
-      <div class="colored-header text-left text-2xl">Covid City Limits</div>
-      <div>
-        <a href="https://www.myhaam.org/" target="_blank">
-          <img src="https://i.imgur.com/xp5Ag1t.png?1" alt="HAAM - Austin logo">
-        </a>
-      </div>
-      <div class="text-gray-200 text-right text-xs">Copyright &copy; 2020</div>
+    <footer class="flex grid grid-flow col-span-12">
+    <div class="flex justify-center">
+      <div class="text-center px-4 m-2"><a href="https://www.myhaam.org/" target="_blank">
+        <img src="https://i.imgur.com/xp5Ag1t.png?1" alt="HAAM - Austin logo" class="object-none object-center" id="logo">
+      </a></div>
+    </div>
+    <div class="text-center px-4 m-2 text-xs" id="copyright">Copyright &copy; 2020</div>
   
        
     </footer>

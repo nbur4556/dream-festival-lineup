@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     //need to get this function working properly
     for (var i = 0; i < 6; i++) {
-      LI.addClass("text-5xl");
+      LI.addClass("text-5xl py-5");
       $("#headliner").append(LI);
       setVideoArtist();
     }

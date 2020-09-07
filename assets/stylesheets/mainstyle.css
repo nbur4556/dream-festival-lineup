@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(25, 22, 29);
+  background-color: #0d212d;
 }
 footer {
   font-family: 'Monoton', cursive;
@@ -25,9 +25,12 @@ footer {
     height: 1976px;
     
     color: white;
+    border:solid 5px;
+    border-color: #FCCA46;
+    border-radius: 5px;
 }
 #headliner{
-  font-family: 'Lilita One', cursive;
+  font-family: 'Bungee Shade', cursive;
   overflow-wrap: break-word;
 }
 #artist{
@@ -45,29 +48,16 @@ footer {
     font-family: "Francois One", sans-serif;
     opacity: 90%;
 }
-#button {
-  font-family: "Francois One", sans-serif;
-  color: black;
-}
-#button {
-  font-family: "Francois One", sans-serif;
-  color:black;
-}
+
 #closeBtn {
     float: right;
 }
 
 
 .colored-header {
-color:rgb(240, 201, 104)
+color: whitesmoke;
 }
 
-.guitar-strings {
-  width: 60px;
-  height: 60px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
 
 #intro {
   font-family: "Francois One", sans-serif;
@@ -77,4 +67,23 @@ color:rgb(240, 201, 104)
 
 #user-input {
   color : black;
+}
+
+#userBox {
+  border: solid 5px;
+  border-color: #FCCA46;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+#videoBox {
+  border: solid 5px;
+  border-color: #FCCA46;
+  border-radius: 5px;
+  padding: 8px;
+  background: #0d212d;
+}
+
+#copyright {
+  color: whitesmoke;
 }
